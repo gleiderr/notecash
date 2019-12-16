@@ -1,2 +1,0 @@
-# notecash
-Created with CodeSandbox
