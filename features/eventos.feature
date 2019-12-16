@@ -17,6 +17,7 @@ Funcionalidade: Anotação de eventos financeiros
     |            | Geladeira      |       |
 
     Esquema do Cenário: Registro de eventos inválidos
+    Cenário: Ordenação de registros
     Cenário: Registro de compra parcelada
     Cenário: Registro de investimento
     Cenário: Criptografia de registros
