@@ -16,8 +16,24 @@ Funcionalidade: Anotação de eventos financeiros
     |            | Plano de saúde | 350   |
     |            | Geladeira      |       |
 
-    Esquema do Cenário: Registro de eventos inválidos
-    Cenário: Ordenação de registros
+    Cenário: Ordenação automática de registros
+        Dado a aplicação renderizada
+        E os registros ordenados:
+            | data       | evento         | valor |
+            |       2019 | Livros         | 570   |
+            | 03/01/2020 | Luz            | 120   |
+            |    01/2020 | Pestação Carro | 500   |
+            |    01/2020 | IPTU atrasado  | 500   |
+            | 15/01/2020 | Luz            | 120   |
+            |       2020 | IPTU           | 500   |
+            |            | Plano de saúde | 350   |
+            |            | Geladeira      |       |
+        E os registros reordenados aleatoriamente com semente também aleatória
+        Quando o usuário digitar os registros
+        Então os registros devem ser exibidos ordenados
+
+    Cenário: Ordenação manual de registros
     Cenário: Registro de compra parcelada
     Cenário: Registro de investimento
     Cenário: Criptografia de registros
+    Cenário: Registro de eventos inválidos
