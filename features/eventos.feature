@@ -32,8 +32,21 @@ Funcionalidade: Anotação de eventos financeiros
         Quando o usuário digitar os registros
         Então os registros devem ser exibidos ordenados
 
-    Cenário: Ordenação manual de registros
     Cenário: Registro de compra parcelada
+        Dada a aplicação renderizada
+        E a compra parcelada:
+            | data       | evento    | valor |
+            | 15/01/2019 | bicicleta | 500   |
+        E as parcelas
+            | data       | valor |
+            | 20/01/2019 | 100   |
+            | 20/02/2019 | 100   |
+            | 20/03/2019 | 100   |
+            | 20/04/2019 | 100   |
+            | 20/05/2019 | 100   |
+
+
+    Cenário: Ordenação manual de registros
     Cenário: Registro de investimento
     Cenário: Criptografia de registros
     Cenário: Registro de eventos inválidos
